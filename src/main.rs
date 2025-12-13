@@ -101,7 +101,7 @@ impl App {
         self.character_index = 0;
     }
 
-    fn submit_message(&mut self) {
+    fn send_messages(&mut self) {
         self.messages.push(self.input.clone());
         // llm logic should go here
         self.input.clear();
@@ -124,7 +124,7 @@ impl App {
                         _ => {}
                     },
                     InputMode::Editing if key.kind == KeyEventKind::Press => match key.code {
-                        KeyCode::Enter => self.submit_message(),
+                        KeyCode::Enter => self.send_messages(),
                         KeyCode::Char(to_insert) => self.enter_char(to_insert),
                         KeyCode::Backspace => self.delete_char(),
                         KeyCode::Left => self.move_cursor_left(),
