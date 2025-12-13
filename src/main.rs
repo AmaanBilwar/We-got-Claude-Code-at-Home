@@ -1,5 +1,5 @@
 mod agents;
-// use agents::gemini_agent::gemini_agent;
+use agents::gemini_agent::send_to_llm;
 use color_eyre::Result;
 use ratatui::{
     DefaultTerminal, Frame,
