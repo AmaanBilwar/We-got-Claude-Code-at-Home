@@ -201,15 +201,15 @@ impl App {
             )),
         }
 
-        let messages: Vec<ListItem> = self
+        let lines: Vec<Line> = self
             .messages
             .iter()
-            .map(|m| {
-                let content = Line::from(Span::raw(format!("AI: {m}")));
-                ListItem::new(content)
-            })
+            .map(|m| Line::from(Span::raw(format!("AI: {m}"))))
             .collect();
-        let messages = List::new(messages).block(Block::bordered().title("Messages"));
+        
+        let messages = Paragraph::new(lines)
+            .wrap(Wrap { trim: true })
+            .block(Block::bordered().title("Messages"));
         frame.render_widget(messages, messages_area);
     }
 }
