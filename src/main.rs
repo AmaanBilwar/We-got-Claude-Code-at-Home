@@ -140,9 +140,9 @@ impl App {
 
     fn draw(&self, frame: &mut Frame) {
         let vertical = Layout::vertical([
-            Constraint::Length(1),
-            Constraint::Min(3),
-            Constraint::Length(3),
+            Constraint::Length(1), // help
+            Constraint::Min(3),    //messages
+            Constraint::Length(3), // input
         ]);
         let [help_area, messages_area, input_area] = vertical.areas(frame.area());
 
