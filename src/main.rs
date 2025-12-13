@@ -9,6 +9,7 @@ use ratatui::{
     text::{Line, Span, Text},
     widgets::{Block, List, ListItem, Paragraph},
 };
+// use std::env;
 
 fn main() -> Result<()> {
     color_eyre::install()?;
