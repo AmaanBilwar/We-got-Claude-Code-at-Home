@@ -7,7 +7,7 @@ use ratatui::{
     layout::{Constraint, Layout, Position},
     style::{Color, Modifier, Style, Stylize},
     text::{Line, Span, Text},
-    widgets::{Block, List, ListItem, Paragraph},
+    widgets::{Block, Paragraph, Wrap},
 };
 // use std::env;
 
