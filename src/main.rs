@@ -105,8 +105,6 @@ impl App {
     }
 
     fn send_messages(&mut self) {
-        // llm logic should go here
-        // current only echoing user messages
         let prompt = self.input.clone();
         let response = tokio::runtime::Runtime::new()
             .unwrap()
