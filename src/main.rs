@@ -104,6 +104,9 @@ impl App {
     fn send_messages(&mut self) {
         self.messages.push(self.input.clone());
         // llm logic should go here
+        // current only echoing user messages
+        let prompt = self.input.clone();
+        self.messages.push(prompt);
         self.input.clear();
         self.reset_cursor();
     }
