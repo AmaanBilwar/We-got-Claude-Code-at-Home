@@ -108,7 +108,10 @@ impl App {
         // llm logic should go here
         // current only echoing user messages
         let prompt = self.input.clone();
-        self.messages.push(prompt);
+        let response = tokio::runtime::Runtime::new()
+            .unwrap()
+            .block_on(send_to_llm(prompt));
+        self.messages.push(response);
         self.input.clear();
         self.reset_cursor();
     }
