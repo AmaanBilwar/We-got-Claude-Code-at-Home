@@ -103,6 +103,7 @@ impl App {
 
     fn submit_message(&mut self) {
         self.messages.push(self.input.clone());
+        // llm logic should go here
         self.input.clear();
         self.reset_cursor();
     }
