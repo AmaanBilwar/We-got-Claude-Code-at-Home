@@ -140,10 +140,10 @@ impl App {
     fn draw(&self, frame: &mut Frame) {
         let vertical = Layout::vertical([
             Constraint::Length(1),
+            Constraint::Min(3),
             Constraint::Length(3),
-            Constraint::Min(1),
         ]);
-        let [help_area, input_area, messages_area] = vertical.areas(frame.area());
+        let [help_area, messages_area, input_area] = vertical.areas(frame.area());
 
         let (msg, style) = match self.input_mode {
             InputMode::Normal => (
