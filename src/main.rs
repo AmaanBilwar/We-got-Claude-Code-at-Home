@@ -1,6 +1,9 @@
 mod agents;
 mod lsp;
-fn main() {
+
+
+#[tokio::main]
+async fn main() {
     
     println!("Coding Agent - Background Service");
     println!("TODO: Implement background service for function autocompletion");
