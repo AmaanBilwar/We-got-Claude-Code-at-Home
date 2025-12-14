@@ -1,5 +1,5 @@
 mod agents;
-
+mod lsp;
 fn main() {
     
     println!("Coding Agent - Background Service");
