@@ -24,8 +24,7 @@ impl LanguageServer for Backend {
     }
 }
 
-#[tokio::main]
-async fn main() {
+pub async fn lsp_main() {
     let stdin = tokio::io::stdin();
     let stdout = tokio::io::stdout();
 
