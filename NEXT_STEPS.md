@@ -1,12 +1,8 @@
 ## next steps 
 
-- [ ] implement tree sitter for basic structure
-- [ ] how to find cursor position?
-- [ ] shortcut for llm to run code
-
-## low priority 
-
-- [ ] fs parsing
-- [ ] dropdown to mention files
-- [ ] need to show user messages with ai messages 
-- [ ] add markdown rendering to llm responses
+- [ ] basic lsp server structure
+    - [ ] `tower-lsp` -> `textDocument/completion`
+    - [ ] get cursor position
+- [ ] tree sitter to find functions at cursor position
+- [ ] send signature to llm, return body
+- [ ] start lsp server with stdin/out transport
